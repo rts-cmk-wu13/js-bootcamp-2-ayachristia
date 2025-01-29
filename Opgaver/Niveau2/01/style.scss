@@ -52,21 +52,8 @@ label em {
   overflow: hidden;
   /*ensures shine effect stays inside button*/
 }
-/* --------------hover shine button  */
-.btnNeonHover {
-  filter: drop-shadow(0 0 1rem rgba(137, 3, 233, 0.25));
-  z-index: 1;
-}
-.btnNeonClicked {
-  width: 45px !important;
-  height: 45px !important;
-  background-color: rgb(172, 172, 175);
-  color: rgb(106, 76, 131);
-  filter: drop-shadow(0 0 1rem rgb(137, 3, 233));
-  z-index: 1;
-}
 
-/* ------------shine button region---------------- */
+/* ---------1 shine button region */
 .shining-button::before {
   content: "";
   position: absolute;
@@ -104,4 +91,66 @@ label em {
 #buttons button:focus {
   outline: none;
 }
-/* -------------shine button region end------------ */
+
+/* --------------hover shine btn region  */
+.btnNeonHover {
+  filter: drop-shadow(0 0 1rem rgba(137, 3, 233, 0.25));
+  z-index: 1;
+}
+.btnNeonClicked {
+  width: 45px !important;
+  height: 45px !important;
+  background-color: rgb(172, 172, 175);
+  color: rgb(106, 76, 131);
+  filter: drop-shadow(0 0 1rem rgb(137, 3, 233));
+  /* z-index: 1; */
+}
+
+/* ----------2 plus / minus region  */
+/* // styling region  */
+.products {
+  display: flex;
+  justify-content: space-between;
+  max-width: 80vw;
+}
+
+.product {
+  &__productcard {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__price {
+    font-size: 0.7rem;
+  }
+
+  &__name {
+    font-size: 0.7rem;
+    width: 65%;
+  }
+
+  &__img {
+    max-width: 100%;
+    min-height: 18rem;
+    object-fit: cover;
+  }
+
+  &__iteration {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.5em;
+  }
+
+  &__arrow {
+    background: none;
+    border: none;
+  }
+}
