@@ -101,7 +101,7 @@ function createProduct(product) {
 
   productName.textContent = product.name;
   productPrice.textContent = product.price;
-  productImg.textContent = product.img;
+  productImg.src = product.image;
   productImg.alt = product.name;
   productCount.textContent = product.amount;
 
