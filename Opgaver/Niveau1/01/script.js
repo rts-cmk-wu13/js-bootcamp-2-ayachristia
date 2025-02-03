@@ -37,19 +37,16 @@ function beregnForhold(a, b) {
   return Math.floor(result);
 }
 
-console.log(beregnForhold(4, 3));
+let result = beregnForhold(4, 3);
+console.log(result);
 
 // -ekstra opgave
 
 function beregnForhold2(a, b) {
-  if (b === 0) {
-    return null;
-  } else {
-    let result = a % b;
-    return result;
-  }
+  if (b == 0) return null;
+  return a / b;
 }
-const result2 = beregnForhold2(4, 0);
+let result2 = beregnForhold2(4, 0);
 console.log(result2);
 
 // -------3
