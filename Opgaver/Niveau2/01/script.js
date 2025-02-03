@@ -3,55 +3,70 @@
 const buttons = document.querySelectorAll("#buttons button");
 console.log(buttons);
 
-// -----------1 shine btn region
-buttons.forEach((btn) => {
-  btn.classList.add("shining-button");
-
-  btn.addEventListener("click", function () {
-    buttons.forEach((btn) => {
-      btn.classList.add("no-shine");
-    });
-
-    btn.focus();
-    btn.classList.remove("no-shine");
+// -------------class video review solution
+function handleClick(clickedEl) {
+  buttons.forEach((button) => {
+    button.style.backgroundColor = "#eee";
   });
-
-  btn.addEventListener("blur", function () {
-    buttons.forEach((btn) => {
-      btn.classList.remove("no-shine");
-    });
-  });
-});
-
-// ------------1 hover shine btn region
-function removeBtnNeonHover() {
-  buttons.forEach((btn) => {
-    btn.classList.remove("btnNeonHover");
-  });
+  clickedEl.style.backgroundColor = "#7f7";
 }
 
-buttons.forEach((btn) => {
-  btn.addEventListener("mouseover", function () {
-    buttons.forEach((btn) => {
-      btn.classList.add("btnNeonHover");
-    });
-  });
-
-  btn.addEventListener("mouseout", function () {
-    removeBtnNeonHover();
-  });
-
-  btn.addEventListener("click", function () {
-    removeBtnNeonHover();
-    btn.classList.add("btnNeonClicked");
-
-    btn.focus();
-  });
-
-  btn.addEventListener("blur", function () {
-    btn.classList.remove("btnNeonClicked");
+buttons.forEach(function (button) {
+  button.addEventListener("click", function () {
+    handleClick(button);
   });
 });
+// -------------class video review end
+
+// // -----------1 shine btn region
+// buttons.forEach((btn) => {
+//   btn.classList.add("shining-button");
+
+//   btn.addEventListener("click", function () {
+//     buttons.forEach((btn) => {
+//       btn.classList.add("no-shine");
+//     });
+
+//     btn.focus();
+//     btn.classList.remove("no-shine");
+//   });
+
+//   btn.addEventListener("blur", function () {
+//     buttons.forEach((btn) => {
+//       btn.classList.remove("no-shine");
+//     });
+//   });
+// });
+
+// // ------------1 hover shine btn region
+// function removeBtnNeonHover() {
+//   buttons.forEach((btn) => {
+//     btn.classList.remove("btnNeonHover");
+//   });
+// }
+
+// buttons.forEach((btn) => {
+//   btn.addEventListener("mouseover", function () {
+//     buttons.forEach((btn) => {
+//       btn.classList.add("btnNeonHover");
+//     });
+//   });
+
+//   btn.addEventListener("mouseout", function () {
+//     removeBtnNeonHover();
+//   });
+
+//   btn.addEventListener("click", function () {
+//     removeBtnNeonHover();
+//     btn.classList.add("btnNeonClicked");
+
+//     btn.focus();
+//   });
+
+//   btn.addEventListener("blur", function () {
+//     btn.classList.remove("btnNeonClicked");
+//   });
+// });
 
 // ---------------- 2 plus/minus region (cloneNode)
 //hver gang man modificere innerHTML skal browseren genlæse og rekonstruere DOM elementet hvilket kan gøre load langsommere for større product databaser, derfor er en dynamisk template at foretrække ved større vare kartoteker
