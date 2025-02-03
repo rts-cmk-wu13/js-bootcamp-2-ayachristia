@@ -53,9 +53,27 @@ console.log(result2);
 
 function skjulElementViaCssSelector(cssSelector) {
   const element = document.querySelector(cssSelector);
-  if (element) {
+  hideElement(element);
+}
+
+function hideElement(element) {
+  if (element != null) {
+    element.style.display = "none";
+  }
+}
+
+function skjulElementsViaCssSelector(cssSelector) {
+  const elements = document.querySelectorAll(cssSelector);
+  elements.forEach(function (element) {
+    hideElement(element);
+  });
+}
+
+function hideElements(element) {
+  if (element != null) {
     element.style.display = "none";
   }
 }
 
 skjulElementViaCssSelector("p");
+skjulElementsViaCssSelector(".box p");
