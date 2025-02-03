@@ -8,6 +8,29 @@ button.addEventListener("click", function () {
   button.classList.toggle("toggle-color");
 });
 
+// let isSelected = false;
+
+// function toggleButton(selected) {
+//   if (selected) {
+//     button.classList.add("toggle-color");
+//   } else {
+//     button.classList.remove("toggle-color");
+//   }
+// }
+
+// button.addEventListener("click", () => {
+//   isSelected = !isSelected;
+
+//   toggleButton(isSelected);
+// });
+// button.addEventListener('click', function(){
+//   if(isSelected){
+//     isSelected = false;
+//   }else{
+//     isSelected = true;
+//   }
+// })
+
 // ------2
 function beregnForhold(a, b) {
   let result = a / b;
