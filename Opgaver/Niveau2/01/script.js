@@ -99,7 +99,6 @@ const productsContainerEl = document.querySelector(".products");
 // for hvert produkt i array skabes en variabel der modtager en function som returnere produktet i en produkt template
 products.forEach((product) => {
   const productEl = createProduct(product);
-  console.log(productEl);
 
   productsContainerEl.appendChild(productEl);
 });
